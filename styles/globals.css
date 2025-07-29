@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 43 100% 96%; /* Creamy base */
+    --foreground: 20 35% 10%;  /* Deep toast brown */
+    --card: 45 100% 95%; /* Buttery white */
+    --card-foreground: 20 35% 10%;
+    --popover: 43 100% 96%;
+    --popover-foreground: 20 35% 10%;
+    --primary: 10 85% 55%; /* Ripe tomato */
+    --primary-foreground: 43 100% 96%; /* Cream on tomato */
+    --secondary: 30 60% 88%; /* Biscuit tone */
+    --secondary-foreground: 25 35% 20%;
+    --muted: 30 50% 90%; /* Light dough */
+    --muted-foreground: 25 30% 45%;
+    --accent: 120 30% 85%; /* Light basil green */
+    --accent-foreground: 120 35% 25%;
+    --destructive: 0 80% 60%; /* Spicy chili red */
+    --destructive-foreground: 43 100% 96%;
+    --border: 30 30% 85%;
+    --input: 30 30% 85%;
+    --ring: 10 85% 55%; /* Tomato ring highlight */
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 20 30% 8%; /* Dark roasted */
+    --foreground: 43 100% 95%;
+    --card: 20 30% 10%;
+    --card-foreground: 43 100% 95%;
+    --popover: 20 30% 10%;
+    --popover-foreground: 43 100% 95%;
+    --primary: 10 85% 60%; /* Tomato sauce */
+    --primary-foreground: 43 100% 95%;
+    --secondary: 28 30% 18%; /* Brown sugar */
+    --secondary-foreground: 43 100% 95%;
+    --muted: 28 30% 18%;
+    --muted-foreground: 43 40% 70%;
+    --accent: 120 20% 25%; /* Deep herb green */
+    --accent-foreground: 43 100% 95%;
+    --destructive: 0 70% 40%; /* Cooked chili */
+    --destructive-foreground: 43 100% 95%;
+    --border: 28 20% 25%;
+    --input: 28 20% 25%;
+    --ring: 10 85% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
